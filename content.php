@@ -3,7 +3,7 @@
 <div class="container">
 
 	<h1>xkcd Password Generator</h1>
-	<h3>by Hank Sway for DWA15</h3><br />
+	<h3>&nbsp;&nbsp;&nbsp;by Hank Sway for DWA15</h3><br />
 
 	<h2>Here's a password: <span class="password"><?php echo ($password) ? $password : '' ; ?></span></h2><br />
 
@@ -11,7 +11,7 @@
 
 	<form method="GET" action="/index.php"> <!-- or GET-->
 		<label name="count">Number of words: </label>
-		<input type="text" name="count" name="count" maxlength="1" id="count"> (max = 9)<br />
+		<input type="text" name="count" name="count" maxlength="1" id="count" value="<?php echo ($count == 1) ? '' : $count ; ?>"> (max = 9)<br />
 		
 		<label name="uppercase">Uppercase first letter? </label>
 		<input type="checkbox" name="uppercase" value="uppercase" <?php echo ($uppercase) ? 'checked="checked"' : '' ; ?>><br />
