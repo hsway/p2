@@ -2,27 +2,26 @@
 
 <div class="container">
 
-	<h2>xkcd Password Generator</h2>
+	<h1>xkcd Password Generator</h1>
+	<h3>by Hank Sway for DWA15</h3><br />
 
-	<h2>Your current password</h2>
+	<h2>Here's a password: <span class="password"><?php echo ($password) ? $password : '' ; ?></span></h2><br />
 
-	<p>Your password is: <?php echo ($password) ? $password : '' ; ?></p>
+	<h3>Make a new one:</h3>
 
-	<h2>Generate a new password</h2>
-
-	<form method="POST" action="/index.php"> <!-- or GET-->
-		<label name="count">Number of words</label>
-		<input type="text" name="count" name="count"><br />
+	<form method="GET" action="/index.php"> <!-- or GET-->
+		<label name="count">Number of words: </label>
+		<input type="text" name="count" name="count" maxlength="1" id="count"> (max = 9)<br />
 		
-		<label name="uppercase">Uppercase first letter?</label>
+		<label name="uppercase">Uppercase first letter? </label>
 		<input type="checkbox" name="uppercase" value="uppercase" <?php echo ($uppercase) ? 'checked="checked"' : '' ; ?>><br />
 		
-		<label name="symbol">Use a symbol?</label>
+		<label name="symbol">Use a symbol? </label>
 		<input type="checkbox" name="symbol" value="symbol" <?php echo ($symbol) ? 'checked="checked"' : '' ; ?>><br />
 		
-		<label name="number">Include a number?</label>
-		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"' : '' ; ?>><br />
+		<label name="number">Include a number? </label>
+		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"' : '' ; ?>><br /><br />
 
-		<input type="submit" name="submit" value="submit"/>
+		<input type="submit" class="btn btn-primary" value="Get your password!"/>
 	</form>
 </div>

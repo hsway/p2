@@ -1,3 +1,15 @@
-.mystyle {
-	color: blue;
+.password {
+	text-align:center;
+	font-size:3rem;
+	margin-bottom:25px;
+	color:#f39c12;
+	font-family:consolas,courier;
+	background-color:#eee;
+	display:inline-block;
+	padding:15px;
+	font-weight:800;
+}
+
+#count {
+	width:40px;
 }

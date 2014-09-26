@@ -9,36 +9,29 @@ date_default_timezone_set('America/New_York');
 // update variables to send back
 // cleanup with any helper functions
 
-// might be good to change to GET
-
-if (isset($_POST['count'])) {
-	//echo $_POST['count'];
-	$count = $_POST['count'];
-
-	if (!is_numeric($count)) {
-		return 'Sorry, there was an error with the number of words you specified.';
-	}
-
+if (isset($_GET['count']) and is_numeric($_GET['count'])) {
+	//echo $_GET['count'];
+	$count = $_GET['count'];
 } else {
 	$count = 1;
 }
 
-if (isset($_POST['uppercase'])) {
-	//echo $_POST['uppercase'];
+if (isset($_GET['uppercase'])) {
+	//echo $_GET['uppercase'];
 	$uppercase = true;
 } else {
 	$uppercase = false;
 }
 
-if (isset($_POST['symbol'])) {
-	//echo $_POST['symbol'];
+if (isset($_GET['symbol'])) {
+	//echo $_GET['symbol'];
 	$symbol = true;
 } else {
 	$symbol = false;
 }
 
-if (isset($_POST['number'])) {
-	//echo $_POST['number'];
+if (isset($_GET['number'])) {
+	//echo $_GET['number'];
 	$number = true;
 } else {
 	$number = false;
@@ -62,7 +55,7 @@ if ($words = file('words.txt')) {
 		$word = $words[$rand];
 
 		// for debugging
-		echo $word . '<br />';
+		//echo $word . '<br />';
 
 		array_push($selected_words, $word);
 	}
@@ -74,7 +67,7 @@ if ($words = file('words.txt')) {
 			$selected_words[$index] = ucfirst($word);
 
 			// for debugging
-			echo $selected_words[$index] . '<br />';
+			//echo $selected_words[$index] . '<br />';
 		}
 	}
 
