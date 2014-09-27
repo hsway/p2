@@ -9,7 +9,7 @@
 
 	<h3>Make a new one:</h3>
 
-	<form method="GET" action="/index.php"> <!-- or GET-->
+	<form method="GET" action="/index.php">
 		<label name="count">Number of words: </label>
 		<input type="text" name="count" name="count" maxlength="1" id="count" value="<?php echo ($count == 1) ? '' : $count ; ?>"> (max = 9)<br />
 		
