@@ -14,13 +14,13 @@
 		<input type="text" name="count" maxlength="1" id="count" value="<?php echo ($count == 1) ? '' : $count ; ?>"> (max = 9)<br />
 		
 		<label for="uppercase">Uppercase first letter? </label>
-		<input type="checkbox" name="uppercase" value="uppercase" <?php echo ($uppercase) ? 'checked="checked"' : '' ; ?>><br />
+		<input type="checkbox" id="uppercase" name="uppercase" value="uppercase" <?php echo ($uppercase) ? 'checked="checked"' : '' ; ?>><br />
 		
 		<label for="symbol">Use a symbol? </label>
-		<input type="checkbox" name="symbol" value="symbol" <?php echo ($symbol) ? 'checked="checked"' : '' ; ?>><br />
+		<input type="checkbox" id="symbol" name="symbol" value="symbol" <?php echo ($symbol) ? 'checked="checked"' : '' ; ?>><br />
 		
 		<label for="number">Include a number? </label>
-		<input type="checkbox" name="number" value="number" <?php echo ($number) ? 'checked="checked"' : '' ; ?>><br /><br />
+		<input type="checkbox" id="number" name="number" value="number" <?php echo ($number) ? 'checked="checked"' : '' ; ?>><br /><br />
 
 		<input type="submit" class="btn btn-primary" value="Get your password!"/>
 	</form>
