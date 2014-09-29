@@ -8,6 +8,7 @@ This is a password generator inspired by the xkcd comic. It offers the users the
 
 ## Demo
 <http://screencast.com/t/Ffh4hEWH>
+Note: in my demo, I mention that I was unsure why I had to use the preg_replace() function rather than str_replace() in my logic.php file. This was subsequently resolved in this thread: <https://piazza.com/class/hykay018bam4zp?cid=219>
 
 ## Details for teaching team
 I don't think there's anything special you need to know!
