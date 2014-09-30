@@ -4,7 +4,7 @@
 date_default_timezone_set('America/New_York');
 
 // pull the data from the form
-if (isset($_GET['count']) and is_numeric($_GET['count']) and $_GET['count'] > 0) {
+if (isset($_GET['count']) and is_numeric($_GET['count']) and $_GET['count'] >= 1 and $_GET['count'] <= 9) {
 	$count = $_GET['count'];
 } else {
 	// if count isn't set, isn't numeric, or is <= 0, default to 1
